@@ -1,0 +1,30 @@
+.range{
+    width: 70%;
+}
+.reviewPdBox{
+    box-shadow:  5px 5px 15px rgba(225, 227, 228, 0.651);
+    margin-top: 2%;
+    display: flex;
+    align-items: center;
+}
+.reviewPdBox:hover{
+    background-color: rgb(238, 238, 238);
+}
+.reviewImg img{
+    width: 90px;
+    height: 90px;
+}
+.reviewText{
+    width: 60%;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 3%;
+    color: rgb(59, 151, 182);
+}
+.linkText{
+    color: darkslategray;
+}
+.linkText:hover{
+    text-decoration: none;
+    color: darkslategray;
+}

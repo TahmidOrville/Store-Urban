@@ -1,0 +1,32 @@
+.emptyMsg{
+    width: 60%;
+    margin-left: 17%;
+    margin-top: 5%;
+}
+.cartArea{
+    display: flex;
+}
+.cartPdZone{
+    width: 80%;
+}
+.rightArea{
+    width: 18%;
+    margin-top: 2%;
+}
+.totalZone{
+    height: 250px;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 10px;
+    padding-top: 2%;
+    margin-bottom: 5%;
+}
+#checkoutBtn{
+    padding: 4% 15%;
+}
+.continueText{
+    color: rgb(255, 190, 11);
+}
+.continueText:hover{
+    text-decoration: none;
+    color: darkorange;
+}

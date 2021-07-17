@@ -1,0 +1,20 @@
+.suggestedContainer img{
+    height: 200px;
+    width:200px
+}
+.suggestedContainer{
+    box-shadow:  5px 5px 15px rgba(192, 192, 192, 0.521);
+    width: 250px;
+    height: 300px;
+    padding: 1%;
+    font-size: small;
+}
+.moreItems{
+    margin: 0 1% 1% 1%;
+    color: rgb(117, 113, 119);
+    font-weight: 700;
+}
+.moreItems:hover{
+    text-decoration: none;
+    color: rgb(117, 113, 119);
+}

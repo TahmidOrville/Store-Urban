@@ -1,0 +1,26 @@
+.cardArea{
+    display: flex;
+    margin-top: -20%;
+    justify-content: space-around;
+}
+.categoryTitle:hover{
+    text-decoration: none;
+}
+
+.card{
+    padding: 1%;
+}
+.card:hover{
+    cursor: pointer;
+    mask-image: linear-gradient(to top,rgba(0,0,0,1),rgba(238, 238, 238, 0.356));
+}
+@media (max-width: 600px) {
+    .cardArea{
+        margin-top: -20%;
+        display: block;
+        margin-left: 10%;
+    }
+    .card{
+        width: 90%!important
+    }
+    }

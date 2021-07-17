@@ -1,0 +1,46 @@
+.footerContainer{
+    background-color: rgb(32, 32, 41);
+    height: fit-content;
+    color: white;
+    margin-top: 5%;
+}
+#topRoute{
+    background-color: rgb(53, 71, 78);
+    height: 50px;
+    padding-top: 1%;
+}
+#topRoute:hover{
+    cursor: pointer;
+}
+.footerArea{
+    display:flex;
+    padding: 3%;
+    font-size: small;   
+}
+.leftFooterArea{
+    width:33%;
+    padding-left: 10%;
+    text-align: left;
+}
+.centralFooterArea{
+    width:33%;
+    padding-left: 10%;
+    text-align: left;
+}
+.rightFooterArea{
+    width:33%;
+    padding-left: 10%;
+    text-align: left;
+}
+.footerLogo{
+   display: flex;
+   justify-content: center;
+   padding-bottom: 2%;
+}
+.copyRight{
+    height: 50px;
+    padding-top: 2%;
+    margin-left: 2%;
+    font-size: smaller;
+    font-weight: 500;
+}

@@ -1,0 +1,11 @@
+.editFormArea{
+    width: 35%;
+    margin-left: 30%;
+} 
+.editForm{
+    display: flex;
+    flex-direction: column;
+}
+.productEditFormContainer{
+    height: 900px;
+}

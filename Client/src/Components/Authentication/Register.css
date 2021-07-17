@@ -1,0 +1,9 @@
+.switchBtnR{
+    width: 50%;
+    font-size: small;
+    background-color: rgb(107, 201, 207);
+}
+#passwordMsg{
+    font-size: small;
+    margin-top: -3%;
+}

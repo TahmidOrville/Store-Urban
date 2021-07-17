@@ -1,0 +1,33 @@
+#orderNumber{
+    color: rgb(68, 211, 247);
+}
+.userInfoBox{
+    margin: 2% 0 0 0;
+    padding: 1% 0;
+    border: 1px solid rgb(202, 200, 200);
+    border-radius: 5px;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+.reviewName{
+    width: 50%
+}
+.notPaid{
+    background-color: rgb(230, 106, 84);
+    color: white;
+}
+.paid{
+    background-color: rgb(162, 230, 84);
+    color:white
+}
+.rightArea{
+    margin: 2.5% 1% 0 1%;
+    width: 30%;
+    height: fit-content;
+}
+.sumArea{
+    border: 1px solid rgb(202, 200, 200);
+    border-radius: 5px;
+    padding: 5%;
+}

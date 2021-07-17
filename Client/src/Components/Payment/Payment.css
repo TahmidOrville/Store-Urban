@@ -1,0 +1,16 @@
+.paymentForm{
+    width: 40%;
+    margin: 3% 0 0 30%;
+    display: flex;
+}
+.colPay{
+    width: 350px!important;
+    margin: 2% 0 0 10%;
+    display: flex;
+    justify-content: space-between;  
+}
+.paymentBtn{
+    margin: 5% 0 0 0;
+    width: 50%;
+    font-size: small;
+}

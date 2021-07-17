@@ -1,0 +1,75 @@
+.review{ 
+    display: flex;
+    margin-top: 2%;
+}
+.leftReview{
+    width: 70%;
+}
+.orderArea{
+    margin: 0 0 0 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 80%;
+}
+.summaryArea{
+    margin: 2.5% 2% 0 3%;
+    width: 40%;
+    height: fit-content;
+    padding: 1%;
+    border: 1px solid rgb(202, 200, 200);
+    border-radius: 5px;
+}
+.summaryHead{
+    display: flex;
+}
+.shipTotal{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(218, 216, 216, 0.507);
+    margin-bottom: 2%;
+    border-radius: 10px;
+    height: 40px;
+}
+.shipProperty{
+ margin-left: 5%;
+ margin-top: 2%;
+}
+.shipCost{
+    margin-right: 5%;
+    font-weight: 600;
+    margin-top: 2%;
+}
+.orderBtn{
+    margin: 0 0 10% 0;
+    width: 70%;
+    font-weight: 600;
+    font-size: medium;
+    padding: 2%;
+}
+.orderBtn:hover{
+    background-color: rgb(236, 181, 41);
+}
+.orderBtn:active{
+    background-color: rgba(236, 181, 41, 0.897);;
+}
+.reviewTitle{
+    font-size: large;
+    font-weight: 600;
+}
+.locationContainer{
+    margin: 2% 0 0 0;
+    padding: 1% 2%;
+    border: 1px solid rgb(202, 200, 200);
+    border-radius: 5px;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+}
+.reviewAddress{
+    width: 70% ;
+}
+.reviewPdContainer{
+    margin: 5% 0 0 15%;
+}
+

@@ -1,0 +1,28 @@
+.profileArea{
+    display: flex;
+}
+
+.profileForm{
+    width: 30%;
+    height: 580px;
+    margin: 1% 5% 2% 10%;
+    padding: 2%;
+}
+.profileInput{
+    background-color: rgb(231, 230, 230)!important;
+    color: black!important;
+    border-radius:0px!important;
+}
+.profileInput:focus{
+    background-color: rgb(231, 230, 230)!important;
+}
+.profileOrders{
+    margin: 1% 0 2% 5%;
+    padding: 2%;
+    width: 50%;
+}
+.profileHeading{
+    font-size: large;
+    color: rgb(67, 67, 68);
+    font-weight: 600;
+}

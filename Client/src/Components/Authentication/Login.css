@@ -1,0 +1,50 @@
+.formArea{
+    width: 30%;
+    height: 590px;
+    margin: 1% 0 2% 35%;
+    padding: 2%;
+    box-shadow:  5px 5px 15px rgba(170, 173, 175, 0.452);
+}
+.title{
+    display: flex;
+    align-items: flex-start;
+    width: fit-content;
+}
+.inputField{
+    background-color: transparent!important;
+    border-top: none!important;
+    border-left: none!important;
+    border-right: none!important;
+}
+.submitBtn{
+    color: white;
+    background-color: rgb(66, 169, 209);
+    border: none;
+    padding: 2%;
+    width: 70%;
+    outline: none;
+    margin-top: 5%;
+    border-radius: 10px;
+}
+.submitBtn:active{
+    background-color: rgb(43, 128, 226);
+}
+.askText{
+    color: rgb(91, 91, 92);
+}
+.switchBtn{
+    background-color: rgb(99, 188, 223);
+    width: 50%;
+    margin-top: 0;
+    font-size: small;
+}
+.ask{
+    display: flex;
+    margin-top: 10%;
+}
+.line{
+    width: 25%;
+    height: 1px;
+    margin: 3% 3% 0 4%;
+    background-color: rgb(141, 140, 140);
+}

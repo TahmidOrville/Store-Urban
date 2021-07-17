@@ -1,0 +1,69 @@
+.navArea{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.logo{
+    height: 50px;
+}
+.form{
+    margin-left: 5%;
+    margin-right: 10%;
+}
+.frm{
+    width: 450px!important;
+}
+.navText{
+    margin-left: 5%;
+   
+}
+.navText:hover{
+    text-decoration: none;
+}
+
+#numberCircle{
+    background-color: rgb(255, 255, 255);
+    color: #000;
+    border-radius: 50%;
+    padding: 0 7px;
+    margin-top: -10px;
+    position: absolute;
+    
+}
+
+#navUserName{
+    color: cornsilk;
+    width: 140px;
+    overflow:hidden;
+}
+#navAdmin{
+    color: cornsilk;
+}
+#adminIcon{
+    color: cornsilk;
+    margin: 7% -7% 0 0;
+}
+#navProfileText:hover{
+  text-decoration: none;
+}
+#hello{
+    font-size: small;
+    color: blanchedalmond;
+}
+#navNameDown{
+    display: flex;
+}
+.navAdminDown{
+    display: flex;
+    margin-left: 5%;
+    width: 150px;
+}
+
+/* @media (max-width: 600px) {
+    .mobile{
+        display: block;
+    }
+    .desktop{
+        display: none;
+    }
+} */

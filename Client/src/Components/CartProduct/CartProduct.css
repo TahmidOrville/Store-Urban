@@ -1,0 +1,55 @@
+.cartPdContainer{
+    display: flex;
+    box-shadow:  5px 5px 15px rgba(169, 175, 177, 0.651);
+    margin: 3% 5% 2% 15%;
+    width: 65%;
+    padding: 1%;
+}
+.pictureContainer{
+    margin-right: 5%;
+}
+.pictureContainer img{
+    height: 200px;
+    width: 180px;
+}
+.infoContainer{
+    width: 500px;  
+}
+#itemName{
+    font-size: large;
+}
+#itemStock{
+    font-size: small;
+}
+.itemPrice{
+    font-size: large;
+    font-weight: 600;
+    color: rgb(112, 112, 112);
+}
+#optionBox{
+    margin: 0%;
+}
+.qtyCont{
+    width: fit-content;
+    margin-left: 40%!important;
+    margin-top: 5%;
+}
+.infoContainer2{
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100px;
+}
+#deleteBtn{
+    border: none;
+    width: 40px;
+    padding: 8%;
+    border-radius: 50%;
+    margin: 0 0 0 50%;
+    background-color: rgb(235, 153, 31);
+}
+#deleteBtn:active{
+    outline: none;
+    background-color: rgb(248, 207, 73);
+}

@@ -1,0 +1,24 @@
+
+.productBox{
+    height: 450px;
+    width: 400px;
+    margin: 1%;
+    box-shadow:  5px 5px 15px rgba(169, 175, 177, 0.651);
+}
+
+.imageArea img{
+    height: 300px;
+    width: 300px;
+}
+.imageArea{
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+#detailsText{
+    font-size: small;
+    margin-left: 70%;
+}
+.rating{
+    display: flex;
+    flex-direction: row;
+}
