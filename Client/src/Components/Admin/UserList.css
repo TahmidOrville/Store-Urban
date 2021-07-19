@@ -7,3 +7,23 @@
     margin-left: 3%!important;
     margin-top: 2%;
 }
+
+@media (max-width: 1000px) {
+    .userTableArea{
+        width: 95%;
+        margin: 20% 0 0 2%;
+    }
+    .shrinkField{
+        display: none;
+    }
+    .userBtn{
+        margin: 5px;
+    }
+    .pdCreateBtn{
+        height: 40px;
+        font-size: smaller!important;
+    }
+    .adminTable{
+        font-size: smaller;
+    }
+    }

@@ -9,3 +9,10 @@
 .productEditFormContainer{
     height: 900px;
 }
+
+@media (max-width: 1000px) {
+    .editFormArea{
+        width: 95%;
+        margin-left: 2%;
+    } 
+    }

@@ -12,30 +12,30 @@ const ProductCategory = () => {
     return (
         <div className="cardArea">
         
-                <Link to="/clothing" className="categoryTitle">
+                <Link to="/clothing/page/1" className="categoryTitle">
 
                 <Card style={{ width: '25rem' }} className="card">
                     <Card.Title>Clothing</Card.Title>
-                    <Card.Img variant="top" src={fashion} height="250px" />
+                    <Card.Img variant="top" src={fashion} height="250px" className="cardImg" />
                     <Card.Body>
                         <Button variant="primary" size="sm" className="moreBtn">Shop Now</Button>
                     </Card.Body>
                 </Card>
             </Link>
 
-            <Link to="/accessories" className="categoryTitle">
+            <Link to="/accessories/page/1" className="categoryTitle">
             <Card style={{ width: '25rem' }} className="card">
                  <Card.Title>Accessories</Card.Title>
-                <Card.Img variant="top" src={accessories} height="250px" />
+                <Card.Img variant="top" src={accessories} height="250px" className="cardImg" />
                 <Card.Body>
                     <Button variant="primary" size="sm" className="moreBtn">Shop Now</Button>
                 </Card.Body>
             </Card>
             </Link>
-            <Link to="/kids" className="categoryTitle">
+            <Link to="/kids/page/1" className="categoryTitle">
             <Card style={{ width: '25rem' }} className="card">
                  <Card.Title>Kids</Card.Title>
-                <Card.Img variant="top" src={kids} height="250px" />
+                <Card.Img variant="top" src={kids} height="250px" className="cardImg" />
                 <Card.Body>
                     <Button variant="primary" size="sm" className="moreBtn">Shop Now</Button>
                 </Card.Body>

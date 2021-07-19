@@ -67,7 +67,7 @@ const CartProduct = (props) => {
                 <p id="itemName">{name}</p>
                 <p id="itemStock">{stock} left in stock</p>
                 <Row className="qtyCont">
-                        <Col id="qtyTitle">Qty:</Col>
+                        <Col id="qtyTitle">Qty</Col>
                         <Col id="selectArea">
                         <FormControl className={classes.margin} id="optionBox">
                             <Select
@@ -75,7 +75,7 @@ const CartProduct = (props) => {
                             id="demo-customized-select"
                             value={qty}
                             onChange={(e)=>
-                                dispatch(addToCartAction(productId,Number(e.target.value)))
+                                dispatch(addToCartAction("category",productId,Number(e.target.value)))
                             }
                             MenuProps={MenuProps}
                             input={<BootstrapInput />}

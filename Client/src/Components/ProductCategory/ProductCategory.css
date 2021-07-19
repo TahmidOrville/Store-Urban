@@ -14,13 +14,18 @@
     cursor: pointer;
     mask-image: linear-gradient(to top,rgba(0,0,0,1),rgba(238, 238, 238, 0.356));
 }
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
     .cardArea{
         margin-top: -20%;
         display: block;
-        margin-left: 10%;
+        margin-left: 5%;
     }
     .card{
-        width: 90%!important
+        width: 95%!important;
+        height: 300px;
+        margin-bottom: 5%;
+    }
+    .cardImg{
+        height: 200px!important;
     }
     }

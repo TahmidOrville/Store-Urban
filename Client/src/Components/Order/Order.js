@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import './Order.css';
+import '../Shipment/Shipment.css';
 import {Link, useHistory} from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import Steps from '../Steps/Steps';
@@ -7,6 +8,7 @@ import { Alert } from 'react-bootstrap';
 import ReviewProduct from '../ReviewProduct/ReviewProduct';
 import { createOrderAction, payOrderAction } from '../../Redux/Actions/OrderActions';
 import Stripe from '../Stripe/Stripe';
+import AlternativeSteps from '../Steps/AlternativeSteps';
 
 
 const Order = () => {
@@ -65,7 +67,8 @@ cart.shippingPrice=cart.cartItems.reduce((acc,item)=>acc+ item.shipping,0).toFix
 cart.totalPrice= (Number(cart.itemsPrice) + Number(cart.shippingPrice)).toFixed(2)
     return (
         <div>
-            <div className="stepsArea"><Steps activeStep='3'></Steps></div>
+            <div className="stepsArea desktopStepper"><Steps activeStep='3'></Steps></div>
+            <div className="stepsArea phoneStepper"><AlternativeSteps activeStep='3'></AlternativeSteps> </div>
            <section className="review">
            <div className="leftReview">
            <div className="orderArea"> 

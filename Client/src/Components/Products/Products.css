@@ -22,3 +22,26 @@
     display: flex;
     flex-direction: row;
 }
+
+@media (max-width: 1000px) {
+    .productBox{
+        height: 270px;
+        width: 170px;
+        margin: 0 0 4% 0;
+    }
+    
+    .imageArea img{
+        height: 160px;
+        width: 140px;
+    }
+    .imageArea{
+        margin-bottom: 3%;
+    }
+    #detailsText{
+        font-size: xx-small;
+        margin-left: 30%;
+    }
+    .pdNameText{
+        font-size: small;
+    }
+    }

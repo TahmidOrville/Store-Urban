@@ -20,31 +20,32 @@ const Footer = () => {
        <div id="topRoute" onClick={topHandler}>Back to Top</div>
         <section className="footerArea">
             <div className="leftFooterArea">
-                <h5>Get to Know Us</h5>
+                <h5 className="footerHeadText">Get to Know Us</h5>
                 <p>Careers</p>
                 <p>Blog</p>
-                <p>About Urban Store</p>
-                <p>Investor Relations</p>
-                <p>Urban Store Tours</p>
+                <p className="hiddenText">About Urban Store</p>
+                <p className="hiddenText">Investor Relations</p>
+                <p className="hiddenText">Urban Store Tours</p>
 
             </div>
             <div className="centralFooterArea">
-            <h5>Make Money with Us</h5>
+            <h5 className="footerHeadText">Make Money with Us</h5>
                 <p>Sell products on Urban Store</p>
                 <p>Sell on Urban Store business</p>
-                <p>Sell apps on Urban Store</p>
-                <p>Become an Affiliate</p>
-                <p>Advertise Your Products </p>
+                <p className="hiddenText">Sell apps on Urban Store</p>
+                <p className="hiddenText">Become an Affiliate</p>
+                <p className="hiddenText">Advertise Your Products </p>
             </div>
             <div className="rightFooterArea">
-            <h5>Let Us Help You</h5>
+            <h5 className="footerHeadText">Let Us Help You</h5>
                 <p>Urban Store & COVID-19</p>
                 <p>Shipping Rates and Policies</p>
-                <p>Urban Store Assistant</p>
+                <p className="hiddenText">Urban Store Assistant</p>
             </div>
         </section>
-        <div className="footerLogo"><img src={logo} alt="urbanStore"/>
-        <p className="copyRight">© 2021-2022, UrbanStore.com, Inc. or its affiliates </p>
+        <div className="footerLogo">
+            <img src={logo} alt="urbanStore"/>
+            <p className="copyRight">© 2021-2022, UrbanStore.com, Inc. or its affiliates </p>
         </div>
        </div>
     );

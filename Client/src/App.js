@@ -10,9 +10,7 @@ import './App.css';
 import Home from "./Components/Home/Home";
 import Header from './Components/Header/Header'
 import Inventory from "./Components/Inventory/Inventory";
-import Clothing from "./Components/Clothing/Clothing";
-import Accessories from "./Components/Accessories/Accessories";
-import Kids from "./Components/Kids/Kids";
+import ProductCall from "./Components/ProductCall/ProductCall";
 import ProductDetails from "./Components/ProductDetails/ProductDetails";
 import Cart from "./Components/Cart/Cart";
 import Shipment from "./Components/Shipment/Shipment";
@@ -30,6 +28,7 @@ import ProductList from "./Components/Admin/ProductList";
 import UserEdit from "./Components/Admin/UserEdit";
 import ProductEdit from "./Components/Admin/ProductEdit";
 import OrderList from "./Components/Admin/OrderList";
+import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
 
 
 
@@ -49,21 +48,18 @@ const [pid,setId]=useState("")
         
     <div className="App">
       <Router>
+        <ScrollToTop></ScrollToTop>
         <Header></Header>
           <Switch>
            
             <Route path="/inventory">
                 <Inventory></Inventory>
             </Route>
-            <Route path="/clothing">
-              <Clothing></Clothing>
+        
+            <Route path="/:category/page/:pageNumber">
+              <ProductCall></ProductCall>
             </Route>
-            <Route path="/accessories">
-              <Accessories></Accessories>
-            </Route>
-            <Route path="/kids">
-              <Kids></Kids>
-            </Route>
+
             <PrivateRoute path="/admin/orderList">
                <OrderList></OrderList>
             </PrivateRoute>

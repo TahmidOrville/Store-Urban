@@ -4,8 +4,8 @@ export const CART_REMOVE_ITEM= 'CART_REMOVE_ITEM'
 export const CART_SAVE_SHIPPING_ADDRESS='CART_SAVE_SHIPPING_ADDRESS'
 export const CART_SAVE_PAYMENT_METHOD='CART_SAVE_PAYMENT_METHOD'
 
-export const addToCartAction= (id,qty)=>async(dispatch,getState)=>{
-    const {data}= await Axios.get(`/products/${id}`)
+export const addToCartAction= (category,id,qty)=>async(dispatch,getState)=>{
+    const {data}= await Axios.get(`/products/${category}/${id}`)
 
     dispatch({
         type: CART_ADD_ITEM,

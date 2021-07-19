@@ -14,3 +14,17 @@
     width: 50%;
     font-size: small;
 }
+
+@media (max-width: 1000px) {
+    .paymentForm{
+        width: 95%;
+        margin: 3% 0 0 0;
+        display: flex;
+    }
+    .colPay{
+        margin: 2% 0 0 2%;
+    }
+    .paymentBtn{
+        margin: 5% 0 0 5%;
+    }
+    }

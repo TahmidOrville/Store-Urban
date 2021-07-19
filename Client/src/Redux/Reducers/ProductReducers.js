@@ -1,4 +1,4 @@
-import { FETCH_PRODUCTS, FETCH_PRODUCTS_FAIL, FETCH_PRODUCTS_SUCCESS, PRODUCT_CREATE, PRODUCT_CREATE_FAIL, PRODUCT_CREATE_RESET, PRODUCT_CREATE_SUCCESS, PRODUCT_DELETE, PRODUCT_DELETE_FAIL, PRODUCT_DELETE_SUCCESS, PRODUCT_DETAILS, PRODUCT_DETAILS_FAIL, PRODUCT_DETAILS_SUCCESS, PRODUCT_REVIEW, PRODUCT_REVIEW_FAIL, PRODUCT_REVIEW_RESET, PRODUCT_REVIEW_SUCCESS, PRODUCT_UPDATE, PRODUCT_UPDATE_FAIL, PRODUCT_UPDATE_RESET, PRODUCT_UPDATE_SUCCESS } from "../Actions/ProductActions";
+import { FETCH_ALL_PRODUCTS, FETCH_ALL_PRODUCTS_FAIL, FETCH_ALL_PRODUCTS_SUCCESS, FETCH_PRODUCTS, FETCH_PRODUCTS_FAIL, FETCH_PRODUCTS_SUCCESS, PRODUCT_CREATE, PRODUCT_CREATE_FAIL, PRODUCT_CREATE_RESET, PRODUCT_CREATE_SUCCESS, PRODUCT_DELETE, PRODUCT_DELETE_FAIL, PRODUCT_DELETE_SUCCESS, PRODUCT_DETAILS, PRODUCT_DETAILS_FAIL, PRODUCT_DETAILS_SUCCESS, PRODUCT_REVIEW, PRODUCT_REVIEW_FAIL, PRODUCT_REVIEW_RESET, PRODUCT_REVIEW_SUCCESS, PRODUCT_UPDATE, PRODUCT_UPDATE_FAIL, PRODUCT_UPDATE_RESET, PRODUCT_UPDATE_SUCCESS } from "../Actions/ProductActions";
 
 
 export const fetchProductReducer=(state={ loading:true, products:[]},action)=>{
@@ -6,8 +6,31 @@ export const fetchProductReducer=(state={ loading:true, products:[]},action)=>{
         case FETCH_PRODUCTS:
         return{...state,loading: true};
         case FETCH_PRODUCTS_SUCCESS:
-            return{...state, loading:false, products: action.payload};
+            return{...state, 
+                loading:false, 
+                products: action.payload.products,
+                pages: action.payload.pages,
+                page: action.payload.page
+            };
+
         case FETCH_PRODUCTS_FAIL:
+            return{...state, loading:false, error: action.payload}
+        default:
+            return state;
+    }
+}
+
+export const fetchAllProductReducer=(state={ loading:true, products:[]},action)=>{
+    switch(action.type){
+        case FETCH_ALL_PRODUCTS:
+        return{...state,loading: true};
+        case FETCH_ALL_PRODUCTS_SUCCESS:
+            return{...state, 
+                loading:false, 
+                products: action.payload
+            };
+
+        case FETCH_ALL_PRODUCTS_FAIL:
             return{...state, loading:false, error: action.payload}
         default:
             return state;

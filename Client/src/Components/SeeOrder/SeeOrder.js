@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import './SeeOrder.css';
-import {Link, useHistory, useParams} from 'react-router-dom';
+import {Link,useParams} from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { Alert } from 'react-bootstrap';
 import ReviewProduct from '../ReviewProduct/ReviewProduct';
@@ -8,6 +8,7 @@ import LoadingBox from '../LoadingBox/LoadingBox';
 import MessageBox from '../MessageBox/MessageBox';
 import { deliverOrderAction, getOrderDetailsAction, ORDER_DELIVERY_RESET } from '../../Redux/Actions/OrderActions';
 import Steps from '../Steps/Steps';
+import AlternativeSteps from '../Steps/AlternativeSteps';
 
 const SeeOrder = () => {
 const {id}=useParams()
@@ -35,7 +36,8 @@ const{order,loading,error}=orderDetails
 
     return loading? <LoadingBox></LoadingBox>: error? <MessageBox>{error}</MessageBox>:
    <div>
-        <div className="stepsArea"><Steps activeStep='4'></Steps></div>
+        <div className="stepsArea desktopStepper"><Steps activeStep='4'></Steps></div>
+            <div className="stepsArea phoneStepper"><AlternativeSteps activeStep='4'></AlternativeSteps> </div>
        <section className="review">
    <div className="leftReview">
    <div className="orderArea"> 

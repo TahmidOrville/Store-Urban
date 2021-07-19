@@ -5,6 +5,8 @@ import {useHistory} from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import Steps from '../Steps/Steps';
 import { savePaymentMethodAction } from '../../Redux/Actions/CartActions';
+import AlternativeSteps from '../Steps/AlternativeSteps';
+import '../Shipment/Shipment.css'
 
 const Payment = () => {
 
@@ -29,7 +31,8 @@ const Payment = () => {
 
     return (
         <div className="paymentArea">
-            <div className="stepsArea"><Steps activeStep='2'></Steps></div>
+            <div className="stepsArea desktopStepper"><Steps activeStep='2'></Steps></div>
+            <div className="stepsArea phoneStepper"><AlternativeSteps activeStep='2'></AlternativeSteps> </div>
             <section className="paymentForm">
             <Form>
                 <Form.Group>

@@ -63,3 +63,11 @@ label {
     color: tomato;
   }
   
+  @media (max-width: 1000px) {
+    .StripeElement {
+      min-width: 330px!important;
+    }
+    .payBtn {
+      margin: 0 0 3% 6%!important;
+    }
+}

@@ -22,17 +22,18 @@ const ProductDetails = () => {
     const dispatch= useDispatch();
     const productDetail= useSelector( state=> state.productDetailsReducer); 
     const {loading,product}= productDetail;
+    const {name,category,description,stock,star,image,shipping,price,numReviews}= product; 
 
     const productReview= useSelector( state=> state.productReview); 
     const {error:reviewError,success:reviewSuccess}= productReview;
-
+    
     useEffect(()=>{
         if (reviewSuccess) {
             setRating(0)
             setComment('')
             dispatch({type: PRODUCT_REVIEW_RESET})
         }
-        dispatch(productDetailsAction(id))
+        dispatch(productDetailsAction("category",id))
      },[dispatch,id,reviewSuccess])
 
     
@@ -42,15 +43,11 @@ const ProductDetails = () => {
     const {products}= fetchProduct;
 
         useEffect(()=>{
-           dispatch(fetchProductsAction())
-        },[dispatch])
+           dispatch(fetchProductsAction(category,1))
+        },[dispatch,category])
 
 
-    const {name,category,description,stock,star,image,shipping,price,numReviews}= product;
-    
-    
-    const similarProducts= products.filter(pd=>pd.category===category)
-    const someProducts=similarProducts.slice(0,4)
+    const someProducts=products.slice(0,4)
 
     const [show, setShow] = useState(false);
     const [visible,setVisible]=useState(false)
@@ -103,6 +100,21 @@ const ProductDetails = () => {
                         }
                     }} />
             </div>
+            <div className="imgContainerPhone">
+                <ReactImageMagnify {...{
+                        smallImage: {
+                            alt: name,
+                            width: 360,
+                            height: 340,
+                            src:image
+                        },
+                        largeImage: {
+                            src: image,
+                            width: 600,
+                            height: 700,
+                        }
+                    }} />
+            </div>
             
 
             <div className="textContainer">
@@ -129,7 +141,7 @@ const ProductDetails = () => {
 
                 <Row>
                     <Col xs={6}>
-                        <Toast onClose={() => setShow(false)} show={show} delay={3000} style={{ position: 'absolute', top: 30,left: -40,width:"250px"}}>
+                        <Toast onClose={() => setShow(false)} show={show} delay={3000} style={{ position: 'absolute', top: 30,left: -10,width:"250px"}}>
                     <Toast.Header>
                             <strong className="mr-auto">Your transaction is secure</strong>
                         </Toast.Header>
@@ -140,10 +152,8 @@ const ProductDetails = () => {
                         <p onClick={() => setShow(true)} id="secure"><img src={lock} alt='Info'/>Secure transaction...</p>
                     </Col>
                     </Row>
-                    <p className="manufacture">Ships from: UrbanStore.com</p>
-                    <p className="manufacture">Sold by: UrbanStore.com</p>
 
-                    <Row>
+                    <Row className="toastBox"> 
                     <Col xs={6}>
                         <Toast onClose={() => setVisible(false)} show={visible} style={{ position: 'absolute',top: 30,left: -40,width:"250px"}}>
                         <Toast.Header></Toast.Header>
@@ -154,10 +164,13 @@ const ProductDetails = () => {
                         <p onClick={() => setVisible(true)} id="secure">Return policy: This item is returnable...</p>
                     </Col>
                     </Row>
+                    <p className="manufacture">Ships from: UrbanStore.com</p>
+                    <p className="manufacture">Sold by: UrbanStore.com</p>
 
             </div>
 
         </div>
+
         <div className="reviewContainer">
            <p id="reviewHeadline">Reviews</p>
            {product.reviews.length===0 && <MessageBox>No Reviews</MessageBox>}

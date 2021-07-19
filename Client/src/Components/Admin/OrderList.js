@@ -25,10 +25,10 @@ const OrderList = () => {
     return (
         <div className="userTableArea">
             {loading? <LoadingBox></LoadingBox>: error? <Alert variant="danger">{error}</Alert>:(
-                <Table striped bordered hover size="sm">
+                <Table striped bordered hover size="sm" className="adminTable">
                  <thead>
                             <tr>
-                            <th>ID</th>
+                            <th className="shrinkField">ID</th>
                             <th>USER</th>
                             <th>DATE</th>
                             <th>TOTAL</th>
@@ -40,7 +40,7 @@ const OrderList = () => {
                         <tbody>
                            {orders.map(order=>(
                                <tr key={order._id}>
-                                   <td>{order._id}</td>
+                                   <td className="shrinkField">{order._id}</td>
                                    <td>{order.user.name}</td>
                                    <td>{order.createdAt.substring(0,10)}</td>
                                    <td>${order.totalPrice}</td>

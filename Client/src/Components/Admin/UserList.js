@@ -32,10 +32,10 @@ const UserList = () => {
     return (
         <div className="userTableArea">
             {loading? <LoadingBox></LoadingBox>: error? <Alert variant="danger">{error}</Alert>:(
-                <Table striped bordered hover size="sm">
+                <Table striped bordered hover size="sm" className="adminTable">
                 <thead>
                   <tr>
-                    <th>ID</th>
+                    <th className="shrinkField">ID</th>
                     <th>NAME</th>
                     <th>EMAIL</th>
                     <th>ADMIN</th>
@@ -45,15 +45,15 @@ const UserList = () => {
                 <tbody>
                     {users.map(user=>(
                         <tr key={user._id}>
-                            <td>{user._id}</td>
+                            <td className="shrinkField">{user._id}</td>
                             <td>{user.name}</td>
                             <td><a href={`mailto:${user.email}`}>{user.email}</a></td>
                             <td>{user.isAdmin ? <FontAwesomeIcon icon={faCheck} style={{color:'green'}}/>:<FontAwesomeIcon icon={faTimes} style={{color:'red'}}/>}</td>
                             <td>
                                 <LinkContainer to={`/admin/user/${user._id}/edit`}>
-                                    <Button size="sm" variant="light"> <FontAwesomeIcon icon={faEdit}/></Button>
+                                    <Button size="sm" variant="light" className="userBtn"> <FontAwesomeIcon icon={faEdit}/></Button>
                                 </LinkContainer> <span></span>
-                                <Button size="sm" variant="danger"  onClick={()=>deleteHandler(user._id)}> <FontAwesomeIcon icon={faTrash}/></Button>
+                                <Button size="sm" variant="danger"  onClick={()=>deleteHandler(user._id)} className="userBtn"> <FontAwesomeIcon icon={faTrash}/></Button>
                             </td>
                         </tr>
                     ))}

@@ -6,16 +6,16 @@
 .logo{
     height: 50px;
 }
-.form{
-    margin-left: 5%;
-    margin-right: 10%;
-}
 .frm{
     width: 450px!important;
 }
+.space{
+    width: 500px;
+    margin-right: 15%;
+}
+
 .navText{
     margin-left: 5%;
-   
 }
 .navText:hover{
     text-decoration: none;
@@ -41,7 +41,7 @@
 }
 #adminIcon{
     color: cornsilk;
-    margin: 7% -7% 0 0;
+    margin: 8% 0 0 0;
 }
 #navProfileText:hover{
   text-decoration: none;
@@ -58,12 +58,63 @@
     margin-left: 5%;
     width: 150px;
 }
+.phoneUser{
+    display: none;
+}
 
-/* @media (max-width: 600px) {
-    .mobile{
-        display: block;
-    }
-    .desktop{
-        display: none;
-    }
-} */
+@media (max-width: 1000px) {
+ 
+.logo{
+    height: 40px;
+    margin-left: -15px;
+    margin-right: -20px;
+}
+.desktopUser{
+    display: none;
+}
+.phoneUser{
+    display: block;
+    margin-bottom: 55px;
+}
+#navUserName{
+    width: 70px;
+    font-size: x-small;
+    margin-left: -15px;
+    font-weight: bold;
+    color: rgb(119, 184, 201);
+
+}
+#hello{
+    font-size: small;
+    color: rgb(119, 184, 201);
+}
+#resNav{
+    background-color: rgb(62, 62, 75)!important;
+}
+.resText{
+    color: rgb(130, 186, 238);
+}
+.navText{
+    margin-left: 30%;
+}
+.navArea{
+   margin-bottom: 15%;
+}
+#adminIcon{
+    color: rgb(109, 107, 102);
+}
+.drawerLinkText{
+    color: rgb(44, 131, 165);
+}
+.drawerLinkText:focus{
+    color: rgb(44, 131, 165);
+    text-decoration: none;
+}
+.signOutText{
+    color: crimson;
+}
+.drawerIcon{
+    height: 30px;
+    margin-right: 5px;
+}
+}

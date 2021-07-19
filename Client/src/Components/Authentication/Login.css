@@ -48,3 +48,12 @@
     margin: 3% 3% 0 4%;
     background-color: rgb(141, 140, 140);
 }
+
+@media (max-width: 1000px) {
+    .formArea{
+        width: 95%;
+        height: 590px;
+        margin: 20% 0 2% 2%;
+        padding: 1%;
+    }   
+}

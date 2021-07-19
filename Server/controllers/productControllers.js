@@ -3,14 +3,35 @@ import asyncHandler from 'express-async-handler'
 import { protect } from '../middleware/authMiddleware.js'
 
 const getProducts= asyncHandler( async (req,res)=>{
-        const products= await Product.find({})
-        res.send(products)
+
+     const pageSize= 9
+     const page= Number(req.query.pageNumber) || 1
+
+     const count = await Product.countDocuments({category: req.params.category})
+    
+        const products= await Product.find({category: req.params.category}).limit(pageSize).skip(pageSize*(page-1))
+        
+            // const products= await Product.find({category: req.params.category})
+
+        // res.json(products)
+
+        res.json({products,page,pages: Math.ceil(count/pageSize)})
     })
+
+    const getAllProducts= asyncHandler( async (req,res)=>{
+
+           const products= await Product.find({})
+          
+           res.json(products)
+   
+       })
+
+
  const getProductById= asyncHandler( async (req,res)=>{
     const product= await Product.findById(req.params.id)
 
     if (product) {
-        res.send(product)
+        res.json(product)
     } else{
         res.status(404)
       throw new Error('Product not found')
@@ -104,4 +125,4 @@ const reviewProduct= asyncHandler( async (req,res)=>{
       }
  })
 
-export {getProducts,getProductById,deleteProductById,createProduct,updateProduct,reviewProduct}
+export {getProducts,getProductById,deleteProductById,createProduct,updateProduct,reviewProduct,getAllProducts}

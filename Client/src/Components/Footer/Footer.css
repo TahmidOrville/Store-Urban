@@ -44,3 +44,36 @@
     font-size: smaller;
     font-weight: 500;
 }
+
+@media (max-width: 1000px) {
+    #topRoute{
+        display: none;
+    }
+    .footerHeadText{
+        font-size: small;
+        font-weight: bold;
+    }
+    .footerArea{
+        padding: 5% 1% 1% 3%;
+        font-size: small;   
+    }
+    .hiddenText{
+        display: none;
+    }
+    .leftFooterArea{
+        padding-left: 5%;
+    }
+    .centralFooterArea{
+        padding-left: 5%;
+    }
+    .rightFooterArea{
+        padding-left: 5%;
+    }
+    .footerLogo{
+       display: block;
+    }
+    .copyRight{
+        opacity: .7;
+    }
+    
+}

@@ -5,6 +5,7 @@ import {useHistory} from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { saveShippingAddressAction } from '../../Redux/Actions/CartActions';
 import Steps from '../Steps/Steps';
+import AlternativeSteps from '../Steps/AlternativeSteps';
 
 const Shipment = () => {
 
@@ -27,7 +28,8 @@ const Shipment = () => {
 
     return (
         <div className="shipArea">
-            <div className="stepsArea"><Steps activeStep='1'></Steps></div>
+            <div className="stepsArea desktopStepper"><Steps activeStep='1'></Steps></div>
+            <div className="stepsArea phoneStepper"><AlternativeSteps activeStep='1'></AlternativeSteps> </div>
             <section className="shipForm">
             <Form>
             <Form.Group controlId="address">

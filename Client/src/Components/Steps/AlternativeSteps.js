@@ -9,14 +9,14 @@ function getSteps() {
   return ['Sign In','Shipping','Payment method','Place Order'];
 }
 
-const Steps=(props)=> {
+const AlternativeSteps=(props)=> {
  
   const [activeStep] = useState(props.activeStep);
   const steps = getSteps();
 
   return (
     <div >
-      <Stepper activeStep={activeStep}>
+      <Stepper activeStep={activeStep} alternativeLabel>
         {steps.map((label) => {
           const stepProps = {};
           const labelProps = {};
@@ -32,4 +32,4 @@ const Steps=(props)=> {
           </div>
         )}
 
- export default Steps
+ export default AlternativeSteps

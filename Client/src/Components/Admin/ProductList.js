@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Alert, Button, Table,Row,Col } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
-import { createProductAction, deleteProductAction, fetchProductsAction, PRODUCT_CREATE_RESET} from '../../Redux/Actions/ProductActions';
+import { createProductAction, deleteProductAction, fetchAllProductsAction, fetchProductsAction, PRODUCT_CREATE_RESET} from '../../Redux/Actions/ProductActions';
 import LoadingBox from '../LoadingBox/LoadingBox';
 import './UserList.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -13,8 +13,8 @@ const ProductList = () => {
 
     const dispatch =useDispatch()
     const history=useHistory()
-    const fetchProductReducer= useSelector(state=>state.fetchProductReducer)
-    const {loading,error,products}=fetchProductReducer
+    const fetchAllProductReducer= useSelector(state=>state.fetchAllProductReducer)
+    const {loading,error,products}=fetchAllProductReducer
 
 
     const productDelete= useSelector(state=>state.productDelete)
@@ -28,7 +28,7 @@ const ProductList = () => {
         if (successCreate) {
             history.push(`/admin/product/${createdProduct._id}/edit`)
         }else{
-            dispatch(fetchProductsAction())
+            dispatch(fetchAllProductsAction())
         }
         
     },[dispatch,successDelete,successCreate,history,createdProduct])
@@ -52,7 +52,7 @@ const ProductList = () => {
                     <h3>Products</h3>
                 </Col>
                 <Col>
-                    <Button className="my-2" onClick={createProductHandler}> <FontAwesomeIcon icon={faPlus}/> Create Product</Button>
+                    <Button className="my-2 pdCreateBtn" onClick={createProductHandler}> <FontAwesomeIcon icon={faPlus}/> Create Product</Button>
                 </Col>
            </Row>
         
@@ -62,10 +62,10 @@ const ProductList = () => {
            {loadingDelete && <LoadingBox></LoadingBox> }
            {errorDelete && <Alert variant="danger">{errorDelete}</Alert>}
             {loading? <LoadingBox></LoadingBox>: error? <Alert variant="danger">{error}</Alert>:(
-                <Table striped bordered hover size="sm">
+                <Table striped bordered hover size="sm" className="adminTable">
                 <thead>
                   <tr>
-                    <th>ID</th>
+                    <th className="shrinkField">ID</th>
                     <th>CATEGORY</th>
                     <th>NAME</th>
                     <th>PRICE</th>
@@ -76,16 +76,16 @@ const ProductList = () => {
                 <tbody>
                     {products.map(product=>(
                         <tr key={product._id}>
-                            <td>{product._id}</td>
+                            <td className="shrinkField">{product._id}</td>
                             <td>{product.category}</td>
                             <td>{product.name}</td>
                             <td>${product.price}</td>
                             <td>{product.stock}</td>
                             <td>
                                 <LinkContainer to={`/admin/product/${product._id}/edit`}>
-                                    <Button size="sm" variant="light"> <FontAwesomeIcon icon={faEdit}/></Button>
+                                    <Button size="sm" variant="light" className="userBtn"> <FontAwesomeIcon icon={faEdit}/></Button>
                                 </LinkContainer> <span></span>
-                                <Button size="sm" variant="danger"  onClick={()=>deleteHandler(product._id)}> <FontAwesomeIcon icon={faTrash}/></Button>
+                                <Button size="sm" variant="danger"  onClick={()=>deleteHandler(product._id)} className="userBtn"> <FontAwesomeIcon icon={faTrash}/></Button>
                             </td>
                         </tr>
                     ))}

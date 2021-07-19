@@ -28,3 +28,9 @@
     text-decoration: none;
     color: darkslategray;
 }
+
+@media (max-width: 1000px) {
+    .range{
+        width: 98%;
+        }
+}

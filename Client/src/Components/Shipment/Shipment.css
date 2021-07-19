@@ -8,3 +8,27 @@
     margin: 1% 10% 2% 30%;
     padding: 2%;
 }
+.phoneStepper{
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    .stepsArea{
+        width: 350px;
+        margin: 3% 0 0 3%;
+        padding: 0;
+    }
+    
+    .shipForm{
+        width: 95%;
+        height: 400px;
+        margin: 1% 0 2% 2%;
+        padding: 2%;
+    }
+    .desktopStepper{
+        display: none;
+    }
+    .phoneStepper{
+        display: block;
+    }
+    }

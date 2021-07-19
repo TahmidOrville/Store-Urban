@@ -26,3 +26,26 @@
     color: rgb(67, 67, 68);
     font-weight: 600;
 }
+
+@media (max-width: 1000px) {
+    .profileArea{
+        display: block;
+    }
+    
+    .profileForm{
+        width: 95%;
+        height: 540px;
+        margin: 1% 5% 2% 2%;
+    }
+    .profileOrders{
+        margin: 1% 0 2% 1%;
+        padding: 1%;
+        width: 95%;
+    }
+    .profileHeading{
+        font-size: medium;
+    }
+    .phoneHiddenField{
+        display: none;
+    }
+    }

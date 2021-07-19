@@ -53,3 +53,46 @@
     outline: none;
     background-color: rgb(248, 207, 73);
 }
+
+@media (max-width: 1000px) {
+    .cartPdContainer{
+        display: flex;
+        margin: 5% 5% 2% 2%;
+        width: 95%;
+    }
+    .pictureContainer{
+        margin-right: 2%;
+    }
+    .pictureContainer img{
+        height: 100px;
+        width: 100px;
+    }
+    .infoContainer{
+        width: 140px!important;  
+    }
+    #itemName{
+        font-size: small;
+        font-weight: bold;
+        color: rgb(65, 62, 62);
+    }
+    #itemStock{
+        display: none;
+    }
+    #optionBox{
+        margin: 0%;
+    }
+    .qtyCont{
+        margin-left: 50%!important;
+    }
+    .infoContainer2{
+        margin-left: 0;
+        width: 100px;
+    }
+    #deleteBtn{
+        background-color: rgb(208, 222, 238);
+    }
+    #deleteBtn:active{
+        background-color: rgb(162, 202, 207);
+    }
+    
+}

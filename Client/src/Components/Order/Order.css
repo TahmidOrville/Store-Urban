@@ -73,3 +73,32 @@
     margin: 5% 0 0 15%;
 }
 
+@media (max-width: 1000px) {
+    .review{ 
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 2%;
+    }
+    .leftReview{
+        width: 95%;
+    }
+    .summaryArea{
+        width: 95%;
+    }
+    .orderBtn:hover{
+        background-color: rgb(31, 104, 153);
+    }
+    .orderBtn:active{
+        background-color: rgba(32, 42, 43, 0.897);;
+    }
+    .reviewTitle{
+        font-size: medium;
+        margin-top: 5%;
+    }
+    .locationContainer{
+        width: 100%;
+    }
+    .reviewPdContainer{
+        margin: 5% 0 0 5%;
+    }
+    }

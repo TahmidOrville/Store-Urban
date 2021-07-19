@@ -13,6 +13,21 @@
       mask-image: linear-gradient(to bottom,rgba(0,0,0,1),rgba(0,0,0,0));
     
   }
-  /* @media (max-width: 600px) {
-    
-    } */
+
+  @media (max-width: 1000px) {
+    .car{
+        height: 245px;
+   
+    }
+    .carImage{
+        width: 400px;
+        height: 250px;
+    }
+    .carousel-control-next-icon{
+        width: 10px !important;
+     }
+     
+     .carousel-control-prev-icon{
+         width: 10px !important;
+      }
+    }

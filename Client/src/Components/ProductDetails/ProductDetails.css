@@ -81,17 +81,17 @@
 .cartBtn{
     border: none;
     border-radius: 25px;
-    background-color: rgb(255, 220, 22);
+    background-color: rgb(98, 171, 240);
     font-size: small;
     padding: 4% 25%;
     margin-bottom: 30%;
     margin-top: 10%;
     margin-left: 5%;
-    color:rgb(73, 72, 72)
+    color:white
 }
 .cartBtn:active{
     outline: none;
-    background-color: rgb(235, 197, 31);
+    background-color: rgb(31, 126, 235);
 }
 .reviewContainer{
     padding: 2%;
@@ -116,4 +116,76 @@
 .reviewTextBox{
     width: 400px!important;
 }
+.imgContainerPhone{
+    display: none;
+}
 
+@media (max-width: 1000px) {
+    .detailsArea{
+        display: block;
+        margin: 3% 3% 0 1%;
+        width: 95%;
+    }
+    .imgContainer{
+        display: none;
+    }
+    .imgContainerPhone{
+        display: block;
+        height: 370px;
+        width: 360px;
+        z-index: 5;
+    }
+    .textContainer{
+        padding: 0;
+        width: 100%;
+        font-size: small;
+    }
+    #pdName{
+        font-size:large;
+    }
+    #description{
+        font-size: medium;
+    }
+    .similar{
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 10%;
+    }
+    .infoCard{
+        height: 470px;
+        width: 95%;
+        margin-left: 4%;
+        display: block;
+        padding: 3%;
+    }
+    .qty{
+        margin-left: 5%;
+    }
+    #qtyTitle{
+        margin-right: -150px;
+    }
+    #cardPrice{
+        color: rgb(51, 159, 185);
+    }
+    #cardShip{
+        margin-top: 0;
+    }
+    #secure{
+        margin-left: 0;
+    }
+    .toastBox{
+        margin-left: 5%!important;
+    }
+   
+    .reviewContainer{
+        width: 100%;
+        margin: 5% 0 2% 0;
+    }
+    .reviewBox{
+        width: 350px;
+        margin-left: 1%;
+    }
+    .reviewTextBox{
+        width: 300px!important;
+    }
+    }

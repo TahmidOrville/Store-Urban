@@ -15,7 +15,7 @@ const Cart = () => {
     const dispatch=useDispatch()
     useEffect(()=>{
             if (pid) {
-                dispatch(addToCartAction(pid,qty))
+                dispatch(addToCartAction("category",pid,qty))
             }
     },[dispatch,pid,qty])
 

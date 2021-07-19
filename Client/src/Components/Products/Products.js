@@ -14,7 +14,7 @@ const {_id,key,name,star,image}=props.product
                 <img src={image} alt=""/>
             </div>
             <div className="textArea">
-                    <p>{name}</p>
+                    <p className="pdNameText">{name}</p>
                     <Rating name="half-rating-read" defaultValue={parseFloat(star)} precision={0.5} readOnly />
                     <p id="detailsText">View details...</p>
             </div>

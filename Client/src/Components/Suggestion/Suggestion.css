@@ -18,3 +18,17 @@
     text-decoration: none;
     color: rgb(117, 113, 119);
 }
+
+
+@media (max-width: 1000px) {
+    .suggestedContainer img{
+        height: 120px;
+        width: 130px
+    }
+    .suggestedContainer{
+        width: 140px;
+        height: 190px;
+        padding: 1%;
+        font-size: x-small;
+    }
+    }

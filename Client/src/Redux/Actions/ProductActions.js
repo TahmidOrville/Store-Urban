@@ -3,6 +3,10 @@ export const FETCH_PRODUCTS="FETCH_PRODUCTS";
 export const FETCH_PRODUCTS_SUCCESS="FETCH_PRODUCTS_SUCCESS";
 export const FETCH_PRODUCTS_FAIL="FETCH_PRODUCTS_FAIL";
 
+export const FETCH_ALL_PRODUCTS="FETCH_ALL_PRODUCTS";
+export const FETCH_ALL_PRODUCTS_SUCCESS="FETCH_ALL_PRODUCTS_SUCCESS";
+export const FETCH_ALL_PRODUCTS_FAIL="FETCH_ALL_PRODUCTS_FAIL";
+
 export const PRODUCT_DETAILS="PRODUCT_DETAILS";
 export const PRODUCT_DETAILS_SUCCESS="PRODUCT_DETAILS_SUCCESS";
 export const PRODUCT_DETAILS_FAIL="PRODUCT_DETAILS_FAIL";
@@ -28,22 +32,33 @@ export const PRODUCT_REVIEW_RESET="PRODUCT_REVIEW_RESET";
 
 
 
-export const fetchProductsAction=()=>async (dispatch)=>{
+export const fetchProductsAction=(category,pageNumber='')=>async (dispatch)=>{
    
     try{
         dispatch({type: FETCH_PRODUCTS})
-        const {data} = await Axios.get('/products');
+        const {data} = await Axios.get(`/products/${category}?pageNumber=${pageNumber}`);
         dispatch({type: FETCH_PRODUCTS_SUCCESS, payload: data});
     }catch(error){
         dispatch({type: FETCH_PRODUCTS_FAIL, payload: error.message })
     }
 }
 
-export const productDetailsAction=(id)=> async(dispatch)=>{
+export const fetchAllProductsAction=()=>async (dispatch)=>{
+   
+    try{
+        dispatch({type: FETCH_ALL_PRODUCTS})
+        const {data} = await Axios.get(`/products`);
+        dispatch({type: FETCH_ALL_PRODUCTS_SUCCESS, payload: data});
+    }catch(error){
+        dispatch({type: FETCH_ALL_PRODUCTS_FAIL, payload: error.message })
+    }
+}
+
+export const productDetailsAction=(category,id)=> async(dispatch)=>{
     
       try{
             dispatch({type: PRODUCT_DETAILS, payload:id})
-            const {data}= await Axios.get(`/products/${id}`);
+            const {data}= await Axios.get(`/products/${category}/${id}`);
             dispatch({type: PRODUCT_DETAILS_SUCCESS, payload: data})
       }catch(error){
                   dispatch({type:PRODUCT_DETAILS_FAIL,
