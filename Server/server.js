@@ -31,10 +31,21 @@ app.use(notFound)
 app.use(errorHandler)
 
 
+
+if(process.env.NODE_ENV==='production'){
+
+    app.use(express.static('Client/build'))
+
+    app.get('*',(req,res)=>res.sendFile(path.resolve(__dirname,'Client','build','index.html')))
+}
+else{
+
 app.get('/',(req,res)=>{
     res.send('Hello Urban admin!')
 })
 
+}
+ 
 app.listen(PORT,()=>{
     console.log(`listening to ${process.env.NODE_ENV} mode on port ${PORT}`.yellow.bold);
 })
