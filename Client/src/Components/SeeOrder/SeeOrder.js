@@ -49,7 +49,7 @@ const{order,loading,error}=orderDetails
             </div>
             <div className="reviewName">
                 <h6>Email</h6>
-                <a href={`mailto:${order.user.email}`}>{order.user.email}</a>
+                <a href={`mailto:${order.user.email}`}><p className="seeMailText">{order.user.email}</p></a>
             </div>
         </div>
         <div className="locationContainer">

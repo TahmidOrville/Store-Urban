@@ -11,7 +11,7 @@
     justify-content: space-around;
 }
 .reviewName{
-    width: 50%
+    width: 50%;
 }
 .notPaid{
     background-color: rgb(230, 106, 84);
@@ -31,7 +31,11 @@
     border-radius: 5px;
     padding: 5%;
 }
-
+.seeMailText{
+    font-size: small;
+    width: 120px;
+    overflow:scroll;
+}
 @media (max-width: 1000px) {
     #orderNumber{
         font-size: medium;

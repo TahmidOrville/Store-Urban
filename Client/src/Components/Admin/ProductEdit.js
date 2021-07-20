@@ -51,7 +51,7 @@ const history= useHistory()
         }else{
 
             if (!product.name || product._id !== id) {
-                dispatch(productDetailsAction("category",id))
+                dispatch(productDetailsAction(id))
             }else{
                 setName(product.name)
                 setPrice(product.price)

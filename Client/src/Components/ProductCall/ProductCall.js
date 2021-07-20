@@ -36,7 +36,7 @@ const Clothing = () => {
 
 
     return  (
-        <div>
+        <div className="cont">
             {
                 loading? <LoadingBox></LoadingBox>
                 :

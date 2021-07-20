@@ -33,7 +33,7 @@ const ProductDetails = () => {
             setComment('')
             dispatch({type: PRODUCT_REVIEW_RESET})
         }
-        dispatch(productDetailsAction("category",id))
+        dispatch(productDetailsAction(id))
      },[dispatch,id,reviewSuccess])
 
     

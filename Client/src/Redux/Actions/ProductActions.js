@@ -36,7 +36,7 @@ export const fetchProductsAction=(category,pageNumber='')=>async (dispatch)=>{
    
     try{
         dispatch({type: FETCH_PRODUCTS})
-        const {data} = await Axios.get(`/products/${category}?pageNumber=${pageNumber}`);
+        const {data} = await Axios.get(`/products/${category}/list?pageNumber=${pageNumber}`);
         dispatch({type: FETCH_PRODUCTS_SUCCESS, payload: data});
     }catch(error){
         dispatch({type: FETCH_PRODUCTS_FAIL, payload: error.message })
@@ -54,11 +54,11 @@ export const fetchAllProductsAction=()=>async (dispatch)=>{
     }
 }
 
-export const productDetailsAction=(category,id)=> async(dispatch)=>{
+export const productDetailsAction=(id)=> async(dispatch)=>{
     
       try{
             dispatch({type: PRODUCT_DETAILS, payload:id})
-            const {data}= await Axios.get(`/products/${category}/${id}`);
+            const {data}= await Axios.get(`/products/${id}`);
             dispatch({type: PRODUCT_DETAILS_SUCCESS, payload: data})
       }catch(error){
                   dispatch({type:PRODUCT_DETAILS_FAIL,

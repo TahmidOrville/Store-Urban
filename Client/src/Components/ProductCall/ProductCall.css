@@ -13,6 +13,10 @@
      width: 80%;
     margin: 2% 0 3% 5%;
 }
+.cont{
+    height: 1600px;
+    color: cadetblue;
+}
 @media (max-width: 1000px) {
     .phoneSearchForm{
         margin: 20% 0 8% 10%;
